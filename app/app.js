@@ -10,7 +10,25 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    promotions: {
+      dependencies: {
+        externalRoutes: {
+          home: 'index',
+          'sub-accounts': 'accounts.sub-accounts'
+        }
+      }
+    },
+    accounts: {
+      dependencies: {
+        externalRoutes: {
+          home: 'index',
+          'sub-promotions': 'promotions.sub-promotions'
+        }
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

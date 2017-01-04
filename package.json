@@ -45,7 +45,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/promotions"
+      "lib/promotions",
+      "lib/accounts"
     ]
   }
 }
